@@ -40,13 +40,13 @@ public class SignInServlet extends HttpServlet {
             System.out.println(user.getName());
             session.setAttribute("user", user);
 
-            url = req.getContextPath() + "/books";
+            url = req.getContextPath() + "/";
         }
         else if(action.equals("logout")){
             HttpSession session = req.getSession();
             session.removeAttribute("user");
 
-            url = req.getContextPath() + "/books";
+            url = req.getContextPath() + "/";
         }
 
         resp.sendRedirect(url);
