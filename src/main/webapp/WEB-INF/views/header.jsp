@@ -61,7 +61,7 @@
 
                             </ul>
                         </div>
-                        <a href="#" class="btn">
+                        <a href="${pageContext.request.contextPath}/cart.jsp" class="btn">
                             <i class="fa-solid fa-cart-shopping header-icon pt-1"></i>
                             <span
                                     class="position-absolute translate-middle badge rounded-pill bg-danger text-light"
@@ -125,10 +125,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link ${param.currentTab eq 'newbooks' ? 'active' : ''}">Sách mới</a>
+                        <a href="${pageContext.request.contextPath}/bookdisplay.jsp" class="nav-link ${param.currentTab eq 'newbooks' ? 'active' : ''}">Sách mới</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ${param.currentTab eq 'bestsellers' ? 'active' : ''}">Sách bán chạy</a>
+                        <a href="${pageContext.request.contextPath}/bookdisplay.jsp" class="nav-link ${param.currentTab eq 'bestsellers' ? 'active' : ''}">Sách bán chạy</a>
                     </li>
                     <li class="nav-item">
                         <a href="${pageContext.request.contextPath}/authors" class="nav-link ${param.currentTab eq 'authors' ? 'active' : ''}">Tác giả</a>

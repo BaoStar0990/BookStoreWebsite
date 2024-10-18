@@ -1,3 +1,5 @@
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -34,7 +36,6 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/styles/author.css" />
 </head>
 <body>
-
   <!-- Header -->
   <jsp:include page="WEB-INF/views/header.jsp">
     <jsp:param name="currentTab" value="home" />
@@ -51,68 +52,72 @@
   </div>
   <!-- end Link -->
 
-<%--  attribute : authors List<Author>--%>
+  <%--
+  Test Error Page
+  http://localhost:8080/error.jsp?code=404
+  --%>
 
-<!-- Authors -->
+  <%-- Simulate the errors array in JSP --%>
+  <%
+    class Error {
+      String code;
+      String name;
+      String message;
 
-  <div class="container mt-4 author-section pb-4">
-    <h2 class="text-start mb-4 font-bold">Các tác giả</h2>
+      public Error(String code, String name, String message) {
+        this.code = code;
+        this.name = name;
+        this.message = message;
+      }
 
-    <div class="row justify-content-center">
-      <!-- Loop through authors using JSTL -->
-      <c:forEach items="${authors}" var="author">
-        <div class="col-6 col-md-4 col-lg-2 text-center mb-4">
-          <a href="${pageContext.request.contextPath}/authordetail.jsp" class="text-decoration-none text-dark">
-            <div class="author-card">
-              <img src="${pageContext.request.contextPath}${author.imageURL}" alt="${author.name}" class="author-image img-fluid rounded-circle" />
-              <p class="fw-bold mt-2">${author.name}</p>
-            </div>
-          </a>
-        </div>
-      </c:forEach>
-    </div>
-    </div>
+      public String getCode() { return code; }
+      public String getName() { return name; }
+      public String getMessage() { return message; }
+    }
 
-    <!-- Pagination -->
-    <div class="container mt-4">
-      <ul class="pagination justify-content-center pagination-cus font-semibold ">
-        <li class="page-item ">
-          <a class="page-link px-3 me-1" href="#" >
-            <i class="fa-solid text-muted fa-chevron-left fs-5"></i>
-          </a>
-        </li>
-        <li class="page-item active ">
-          <a class="page-link text-muted px-3 mx-1" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link text-muted px-3 mx-1" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link text-muted px-3 mx-1" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link text-muted px-3 ms-1" href="#">
-            <i class="fa-solid fa-chevron-right fs-5"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!--end Pagination -->
-<%--<div class="container my-4">--%>
-<%--  <h2 class="mb-3 font-semibold">Tác giả</h2>--%>
+    List<Error> errors = new ArrayList<>();
+    errors.add(new Error("404", "Không tìm thấy trang", "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa."));
+    errors.add(new Error("500", "Lỗi máy chủ", "Máy chủ đang gặp sự cố, vui lòng thử lại sau."));
+    errors.add(new Error("401", "Không được phép", "Bạn không có quyền truy cập trang này."));
+    errors.add(new Error("403", "Cấm truy cập", "Bạn không có quyền truy cập trang này."));
+    errors.add(new Error("400", "Yêu cầu không hợp lệ", "Yêu cầu của bạn không hợp lệ, vui lòng kiểm tra lại."));
+    errors.add(new Error("405", "Phương thức không hợp lệ", "Phương thức yêu cầu không hợp lệ."));
+    errors.add(new Error("503", "Dịch vụ không khả dụng", "Dịch vụ đang tạm thời không khả dụng, vui lòng thử lại sau."));
 
-<%--  <div class="row justify-content-center">--%>
-<%--    <c:forEach items="${authors}" var="author">--%>
-<%--      <div class="col-lg-3 col-md-4 col-sm-6 my-2 text-center">--%>
-<%--        <div class="author-card">--%>
-<%--          <img src="${pageContext.request.contextPath}${author.imageURL}" alt="${author.name}" class="author-image">--%>
-<%--          <p class="font-semibold mt-1">${author.name}</p>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </c:forEach>--%>
-<%--  </div>--%>
-<%--</div>--%>
-<!-- end Authors -->
+    String errorCode = request.getParameter("code");
+    if (errorCode == null) errorCode = "404";
+
+    Error selectedError = null;
+    for (Error e : errors) {
+      if (e.getCode().equals(errorCode)) {
+        selectedError = e;
+        break;
+      }
+    }
+  %>
+
+  <%-- Display the error information --%>
+  <div class="container text-center d-flex flex-column justify-content-center align-items-center mt-5">
+    <% if (selectedError != null) { %>
+    <!-- Error Code -->
+    <h1 class="display-1 fw-bold text-primary" style="font-size: 7rem;"><%= selectedError.getCode() %></h1>
+
+    <!-- Error Name -->
+    <h2 class="text-secondary"><%= selectedError.getName() %></h2>
+
+    <!-- Error Message -->
+    <p class="lead"><%= selectedError.getMessage() %></p>
+
+    <!-- Button to go back -->
+    <a href="/" class="primary-btn mt-3 text-decoration-none">Go Back Home</a>
+    <% } else { %>
+    <!-- Default case if no error matches -->
+    <h1 class="display-1 fw-bold text-primary" style="font-size: 7rem;">404</h1>
+    <h2 class="text-secondary">Không tìm thấy trang</h2>
+    <p class="lead">Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.</p>
+    <a href="/" class="primary-btn mt-3 text-decoration-none">Go Back Home</a>
+    <% } %>
+  </div>
 
   <%--    Footer--%>
   <jsp:include page="WEB-INF/views/footer.jsp"/>

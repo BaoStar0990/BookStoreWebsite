@@ -141,7 +141,7 @@ public class BooksServlet extends HttpServlet {
 
         // Sample Data for authors section
         List<Author> authors = new ArrayList<>();
-        for (int i = 1; i <= 8; i++) {
+        for (int i = 1; i <= 6; i++) {
             authors.add(new Author(i, "Paulo Coelho ", "/assets/images/authors/author.jpg",
                     "Paulo Coelho, tên đầy đủ là Paulo Coelho de Souza, sinh ngày 24 tháng 8 năm 1947"));
         }

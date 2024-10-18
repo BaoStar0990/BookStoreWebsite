@@ -32,11 +32,19 @@
     <jsp:param name="currentTab" value="aboutus" />
 </jsp:include>
 
+<!-- Link -->
+<div class="container mt-2">
+    <p class="fw-semibold">
+        <a href="/" class="text-decoration-none text-dark">Trang chủ</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#" class="text-decoration-none text-dark">Về Naoki</a>
+    </p>
+</div>
+<!-- end Link -->
+
 <%--end Header--%>
 <div class="container p-0 position-relative mt-5">
     <!-- Image with slogan -->
-
-
     <div class="row">
         <div class="col-12 position-relative">
             <img

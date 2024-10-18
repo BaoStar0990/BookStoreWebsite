@@ -21,7 +21,7 @@
     <!-- Start of the Book List Grid -->
     <div class="row book-list">
 
-<%--        attribute : books List<Books>--%>
+    <%--        attribute : books List<Books>--%>
 
         <c:forEach var="book" items="${books}" varStatus="status">
             <!-- Each book occupies 2, 4, or 6 columns depending on the screen size -->

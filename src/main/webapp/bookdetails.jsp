@@ -55,7 +55,7 @@
     <!-- Link -->
     <div class="container mt-2">
         <p class="fw-semibold">
-            Trang chủ
+            <a href="/" class="text-decoration-none text-dark">Trang chủ</a>
             <i class="fa-solid fa-chevron-right"></i>
             Lịch sử
             <i class="fa-solid fa-chevron-right"></i>
