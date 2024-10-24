@@ -103,7 +103,7 @@
         <a href="bookdetails" class="d-block text-decoration-none card-shadow" style="color: inherit;">
           <div class="card">
             <!-- book image -->
-            <img src="https://thpthuongphung.quangtri.edu.vn/upload/32303/fck/files/Picture1(8).jpg" class="card-img-top" alt="Sample Book Title">
+            <img src="https://www.netabooks.vn/Data/Sites/1/Product/70144/loi-chua-noi.jpg" class="card-img-top" alt="Sample Book Title">
             <div class="card-body">
               <!-- book title -->
               <h6 class="card-title mb-1">Trên đường băng</h6>
