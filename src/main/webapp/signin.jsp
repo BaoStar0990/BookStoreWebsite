@@ -55,7 +55,7 @@
                     </div>
 
                     <!-- Forgot password -->
-                    <div class="text-end mb-4">
+                    <div class="mb-4">
                         <a href="#" class="text-primary fw-semibold text-decoration-none link-hover">Quên mật khẩu?</a>
                     </div>
 
@@ -64,7 +64,7 @@
                 </form>
 
                 <p class="text-center mb-0">
-                    Hoặc, <a href="register.jsp" class="text-danger fw-bold text-decoration-none">Đăng ký</a>
+                    Hoặc, <a href="signup" class="text-danger fw-bold text-decoration-none">Đăng ký</a>
                 </p>
             </div>
         </div>

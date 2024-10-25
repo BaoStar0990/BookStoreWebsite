@@ -46,7 +46,7 @@
     <p class="fw-semibold">
       <a href="/" class="text-decoration-none text-dark">Trang chủ</a>
       <i class="fa-solid fa-chevron-right"></i>
-      Tác giả
+      <a href="#" class="text-decoration-none text-dark">Tác giả</a>
     </p>
   </div>
   <!-- end Link -->

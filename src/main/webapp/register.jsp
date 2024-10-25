@@ -62,7 +62,7 @@
 
                 <!-- Login link -->
                 <p class="text-center mb-0">
-                    Hoặc, <a href="signin.jsp" class="text-danger fw-bold text-decoration-none">Đăng Nhập</a>
+                    Hoặc, <a href="signin" class="text-danger fw-bold text-decoration-none">Đăng Nhập</a>
                 </p>
             </div>
         </div>

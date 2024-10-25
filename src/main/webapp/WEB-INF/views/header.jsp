@@ -46,14 +46,14 @@
                                     <c:otherwise>
                                         <li class="dropdown-header fs-6 fw-bold">Xin chào, ${sessionScope.user.name}</li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a href="#" class="dropdown-item"><i class="fa-solid fa-user me-2"></i>Tài khoản của tôi</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/user_information.jsp" class="dropdown-item"><i class="fa-solid fa-user me-2"></i>Tài khoản của tôi</a></li>
                                         <li><a href="#" class="dropdown-item"><i class="fa-solid fa-cart-shopping me-2"></i>Đơn hàng của tôi</a></li>
                                         <li><a href="#" class="dropdown-item"><i class="fa-solid fa-gear me-2"></i>Cài đặt</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <form action="signin" method="post">
+                                            <form class="m-0" action="signin" method="post">
                                                 <input type="hidden" name="action" value="logout">
-                                                <a href="javascript:" class="dropdown-item" onclick="parentNode.submit()"><i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất</a>
+                                                <a href="javascript:" class="dropdown-item" onclick="parentNode.submit()"><i class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
                                             </form>
                                         </li>
                                     </c:otherwise>
