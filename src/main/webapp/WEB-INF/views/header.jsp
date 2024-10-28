@@ -46,7 +46,7 @@
                                     <c:otherwise>
                                         <li class="dropdown-header fs-6 fw-bold">Xin chào, ${sessionScope.user.name}</li>
                                         <div class="dropdown-divider"></div>
-                                        <li><a href="${pageContext.request.contextPath}/user_information.jsp" class="dropdown-item"><i class="fa-solid fa-user me-2"></i>Tài khoản của tôi</a></li>
+                                        <li><a href="${pageContext.request.contextPath}/usersetting.jsp?setting=profile" class="dropdown-item"><i class="fa-solid fa-user me-2"></i>Tài khoản của tôi</a></li>
                                         <li><a href="#" class="dropdown-item"><i class="fa-solid fa-cart-shopping me-2"></i>Đơn hàng của tôi</a></li>
                                         <li><a href="#" class="dropdown-item"><i class="fa-solid fa-gear me-2"></i>Cài đặt</a></li>
                                         <div class="dropdown-divider"></div>
@@ -81,8 +81,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Danh mục</a>
                         <ul id="dropdowns" class="dropdown-menu mx-auto multi-column columns-3 dropdown-menu-center">
 
-<%--                            attribute : categories List<Category>--%>
-
+                            <%--attribute : categories List<Category>--%>
                             <c:set var = "count" scope = "request" value = "${4}"/>
                             <c:forEach items="${categories}" var="category">
                                 <c:if test="${count > 3}">
@@ -99,28 +98,6 @@
                                     </div>
                                 </c:if>
                             </c:forEach>
-<%--                            <div class="row">--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Truyện tranh</a></li>--%>
-<%--                                </div>--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Lịch sử</a></li>--%>
-<%--                                </div>--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Tiểu thuyết</a></li>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                            <div class="row">--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Học tập</a></li>--%>
-<%--                                </div>--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Tôn giáo</a></li>--%>
-<%--                                </div>--%>
-<%--                                <div class="col-md-4">--%>
-<%--                                    <li><a href="#" class="dropdown-item btn btn-outline-danger">Tài liệu</a></li>--%>
-<%--                                </div>--%>
-<%--                            </div>--%>
                         </ul>
                     </li>
 
