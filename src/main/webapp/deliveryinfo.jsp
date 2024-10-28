@@ -134,7 +134,7 @@
                         <span>Phí vận chuyển</span>
                         <span><fmt:formatNumber value="40000" type="number" pattern="#,##0" />đ</span>
                     </div>
-                    <div class="d-flex justify-content-between fw-semibold">
+                    <div class="d-flex justify-content-between fw-semibold fs-5 text-primary">
                         <span>Tổng cộng</span>
                         <span><fmt:formatNumber value="99999999" type="number" pattern="#,##0" />đ</span>
                     </div>
