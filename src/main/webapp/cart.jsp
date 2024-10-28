@@ -114,8 +114,8 @@
         </h4>
     </div>
     <!-- Checkout Button -->
-    <div class="mt-4">
-        <button class="btn primary-btn btn-lg ms-auto">Thanh toán</button>
+    <div class="mt-4 d-flex justify-content-end">
+        <a href="deliveryinfo.jsp" class="primary-btn d-inline-block">Thanh toán</a>
     </div>
 </div>
 
