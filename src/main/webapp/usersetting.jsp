@@ -36,7 +36,7 @@
 <body>
     <!-- Header -->
     <jsp:include page="WEB-INF/views/header.jsp">
-        <jsp:param name="currentTab" value="home" />
+        <jsp:param name="currentTab" value="" />
     </jsp:include>
     <!-- end Header -->
 
@@ -65,7 +65,7 @@
             </div>
 
             <!-- Main content -->
-            <div class="col-md-9 ps-5">
+            <div class="col-md-9 mt-4">
                 <c:choose>
                     <c:when test="${param.setting == 'profile'}">
                         <%@ include file="WEB-INF/views/customers/profile.jsp" %>

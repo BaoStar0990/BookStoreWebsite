@@ -37,16 +37,16 @@
 
   <!-- Header -->
   <jsp:include page="WEB-INF/views/header.jsp">
-    <jsp:param name="currentTab" value="home" />
+    <jsp:param name="currentTab" value="authors" />
   </jsp:include>
   <!-- end Header -->
 
   <!-- Link -->
   <div class="container mt-2">
     <p class="fw-semibold">
-      <a href="/" class="text-decoration-none text-dark">Trang chủ</a>
+      <a href="${pageContext.request.contextPath}" class="text-decoration-none text-dark">Trang chủ</a>
       <i class="fa-solid fa-chevron-right"></i>
-      <a href="#" class="text-decoration-none text-dark">Tác giả</a>
+      <a href="${pageContext.request.contextPath}/authors" class="text-decoration-none text-dark">Tác giả</a>
     </p>
   </div>
   <!-- end Link -->
@@ -72,6 +72,8 @@
       </c:forEach>
     </div>
     </div>
+
+  <!--end Authors -->
 
     <!-- Pagination -->
     <div class="container mt-4">

@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/styles/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/styles/footer.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/styles/cart.css" />
+
 </head>
 <body>
 <%--    Header--%>
@@ -115,7 +116,7 @@
     </div>
     <!-- Checkout Button -->
     <div class="mt-4 d-flex justify-content-end">
-        <a href="deliveryinfo.jsp" class="primary-btn d-inline-block">Thanh toán</a>
+        <a href="orderdetail.jsp" class="primary-btn d-inline-block">Thanh toán</a>
     </div>
 </div>
 

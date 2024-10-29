@@ -59,6 +59,6 @@
 <%--    Footer--%>
     <jsp:include page="WEB-INF/views/footer.jsp"/>
 <%-- end Footer--%>
-    <script src="./assets/javascript/header.js"></script>
+<%--    <script src="./assets/javascript/header.js"></script>--%>
 </body>
 </html>

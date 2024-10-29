@@ -100,8 +100,8 @@ public class BooksServlet extends HttpServlet {
         categories.add(new Category(8, "Khoa học Viễn tưởng", "khoa-hoc-vien-tuong"));
         categories.add(new Category(9, "Phiêu lưu ly kỳ", "phieu-luu-ly-ky"));
         categories.add(new Category(10, "Tản văn", "tan-van"));
-        categories.add(new Category(11, "Truyện tranh (graphic novel)", "truyen-tranh"));
-        categories.add(new Category(12, "Sách tranh (Picture book)", "sach-tranh"));
+        categories.add(new Category(11, "Truyện tranh", "truyen-tranh"));
+        categories.add(new Category(12, "Sách tranh", "sach-tranh"));
         categories.add(new Category(13, "Thơ - kịch", "tho-kich"));
         categories.add(new Category(14, "Light novel", "light-novel"));
         categories.add(new Category(15, "Sách tô màu", "sach-to-mau"));
@@ -132,7 +132,7 @@ public class BooksServlet extends HttpServlet {
         categories.add(new Category(40, "Sách mới xuất bản", "sach-moi-xuat-ban"));
         categories.add(new Category(41, "Sách sắp xuất bản", "sach-sap-xuat-ban"));
         categories.add(new Category(42, "Sách được giải thưởng", "sach-giai-thuong"));
-        categories.add(new Category(43, "Sách pop-up, lift-the-flaps", "sach-pop-up"));
+        categories.add(new Category(43, "Sách pop-up", "sach-pop-up"));
         categories.add(new Category(44, "Nghiên cứu Việt Nam", "nghien-cuu-viet-nam"));
         categories.add(new Category(45, "Việt Nam danh tác", "viet-nam-danh-tac"));
         categories.add(new Category(46, "Tác giả Việt Nam", "tac-gia-viet-nam"));

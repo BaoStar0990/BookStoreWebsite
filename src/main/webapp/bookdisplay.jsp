@@ -34,16 +34,16 @@
 <body>
 <%--    Header--%>
 <jsp:include page="WEB-INF/views/header.jsp">
-  <jsp:param name="currentTab" value="" />
+  <jsp:param name="currentTab" value="newbooks" />
 </jsp:include>
 <%--end Header--%>
 
 <!-- Link -->
 <div class="container mt-2">
   <p class="fw-semibold">
-    <a href="/" class="text-decoration-none text-dark">Trang chủ</a>
+    <a href="${pageContext.request.contextPath}" class="text-decoration-none text-dark">Trang chủ</a>
     <i class="fa-solid fa-chevron-right"></i>
-    Sách mới
+    <a href="bookdisplay.jsp" class="text-decoration-none text-dark">Sách mới</a>
   </p>
 </div>
 <!-- end Link -->

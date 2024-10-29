@@ -50,7 +50,7 @@
 
     <%--end Header--%>
 
-<%--    attribute : book<Book>--%>
+<%--    attribute : List<Book>--%>
 
     <!-- Link -->
     <div class="container mt-2">

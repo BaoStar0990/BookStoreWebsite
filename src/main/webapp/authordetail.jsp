@@ -74,6 +74,9 @@
         </div>
       </div>
 
+
+    <%--    attribute : List<Book>--%>
+<%--    Author's book list--%>
     <!-- Book List -->
     <%--    Thay bằng book-list.jsp trên trang động--%>
     <div class="row book-list">
