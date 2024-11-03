@@ -38,6 +38,7 @@
                     <h4 class="fw-semibold mb-3">Thông tin nhận hàng</h4>
                     <div class="mb-3">
                         <label class="mb-1">Sổ địa chỉ</label>
+<%--                        attribute : --%>
                         <select class="form-select" name="addressBook">
                             <option>Địa chỉ khác...</option>
                         </select>

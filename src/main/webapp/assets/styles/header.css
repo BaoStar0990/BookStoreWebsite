@@ -1,3 +1,4 @@
+
 :root {
     --primary-font: 'Quicksand', sans-serif;
     --primary-color: #E41936;
@@ -8,6 +9,7 @@
 .dropdown-menu.columns-3 {
     min-width: 650px;
 }
+
 .dropdown-menu-center {
     right: auto;
     left: 50%;
